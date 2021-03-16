@@ -5,13 +5,6 @@ USE retaildb;
 CREATE TABLE reviews (
   id INT NOT NULL AUTO_INCREMENT,
   product_id INT NOT NULL,
-  page_results INT NOT NULL,
-  count_page INT NOT NULL,
-  PRIMARY KEY(id)
-);
-
-CREATE TABLE results (
-  id INT NOT NULL AUTO_INCREMENT,
   review_id INT NOT NULL,
   rating TINYINT,
   summary VARCHAR(60),
@@ -22,14 +15,14 @@ CREATE TABLE results (
   reviewer_name VARCHAR(255),
   helpfulness TINYINT,
   PRIMARY KEY (id),
-  FOREIGN KEY (reviews_id) REFERENCES reviews(id)
+  FOREIGN KEY (products_id) REFERENCES products(id)
 );
 
 CREATE TABLE photos(
   id INT NOT NULL AUTO_INCREMENT,
   photo_url VARCHAR(1000),
   PRIMARY KEY(id),
-  FOREIGN KEY (results_id) REFERENCES results(id)
+  FOREIGN KEY (reviews_id) REFERENCES reviews(id)
 );
 
 CREATE TABLE ratings_recommended (
