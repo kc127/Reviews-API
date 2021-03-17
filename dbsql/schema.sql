@@ -19,21 +19,6 @@ CREATE TABLE reviews (
   PRIMARY KEY(id)
 );
 
--- CREATE TABLE reviews (id INT AUTO_INCREMENT
---   -- product_id INT NOT NULL,
---   -- review_id INT NOT NULL,
---   -- rating TINYINT,
---   -- summary VARCHAR(60),
---   -- recommend BIT,
---   -- response VARCHAR(1000),
---   -- body VARCHAR(1000),
---   -- review_date DATETIME,
---   -- reviewer_name VARCHAR(255),
---   -- helpfulness TINYINT,
---   PRIMARY KEY (id),
---   -- FOREIGN KEY (products_id) REFERENCES products(id)
--- );
-
 CREATE TABLE photos(
   id INT NOT NULL AUTO_INCREMENT,
   photo_url VARCHAR(1000),
