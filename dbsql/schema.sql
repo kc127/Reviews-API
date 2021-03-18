@@ -13,7 +13,7 @@ CREATE TABLE reviews (
   recommend BIT,
   response VARCHAR(1000),
   body VARCHAR(1000),
-  review_date DATETIME,
+  review_date DATETIME NOT NULL,
   reviewer_name VARCHAR(255),
   helpfulness TINYINT,
   PRIMARY KEY(id)
