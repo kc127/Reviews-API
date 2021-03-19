@@ -105,3 +105,4 @@ dist
 
 # csv data folder
 data/
+dataClean/
