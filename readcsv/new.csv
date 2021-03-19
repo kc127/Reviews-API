@@ -1,0 +1,16 @@
+id,product_id,rating,date,summary,body,recommend,reported,reviewer_name,reviewer_email,response,helpfulness
+1,1,5,"2019-01-01","This product was great!","I really did or did not like this product based on whether it was sustainably sourced.  Then I found out that its made from nothing at all.",true,false,"funtime","first.last@gmail.com",,8
+2,1,4,"2019-01-11","This product was ok!","I really did not like this product solely because I am tiny and do not fit into it.",false,false,"mymainstreammother","first.last@gmail.com",,2
+3,2,4,"2019-06-23","I am liking these glasses","They are very dark.  But that's good because I'm in very sunny spots",true,false,"bigbrotherbenjamin","first.last@gmail.com","Glad you're enjoying the product!",5
+4,2,4,"2019-03-12","They look good on me","I so stylish and just my aesthetic.",true,false,"fashionperson","first.last@gmail.com",,1
+0,2,3,"2019-04-14","I'm enjoying wearing these shades","Comfortable and practical.",true,false,"shortandsweeet","first.last@gmail.com",,5
+6,2,5,"2019-06-16","I'm not a fan!","I don't like them",false,false,"negativity","first.last@gmail.com","Sorry to hear. Is there anything in particular you don't like?",0
+0,2,"2019-05-23","This product was ok!","They're fine but I wouldn't buy again.",false,false,"anyone","first.last@gmail.com",,0
+8,4,4,"2019-03-21","These pants are fine","I do like these pants",true,false,"shopaddict","first.last@gmail.com",,2
+9,4,5,"2019-02-18","These pants are great!","I really like these pants. Best fit ever!",true,false,"figuringitout","first.last@gmail.com",,2
+10,4,2,"2019-01-05","These pants are ok!","A little tight on the waist.",false,false,"bigbrother","first.last@gmail.com",,2
+11,5,4,"2019-05-04","Great shoes!","Now I can get to stomping!",true,false,"chingy","first.last@gmail.com",,12
+12,5,3,"2019-04-13","They're heavy but great","I like them but they run wide.",true,false,"thinfootjim","first.last@gmail.com",,3
+13,7,5,"2018-12-13","Ye is good at everything","I mortgaged my house to pay for these",true,false,"yecrazy","first.last@gmail.com",,2
+14,7,1,"2018-11-11","I don't like Kanye","I didn't buy the shoes but I don't like the man behind them",false,true,"taylor","first.last@gmail.com",,0
+15,12,5,"2019-04-11","Sed repellat quo recusandae.","Vitae reiciendis aspernatur voluptatem labore voluptatem ullam quos. Esse dolorum quas sunt unde est. Odio necessitatibus natus commodi at. Quia exercitationem aut quia sapiente harum et. Odit et hic nobis.",1,0,"Pink.Purdy25","Donny.Jacobson11@yahoo.com",null,11
