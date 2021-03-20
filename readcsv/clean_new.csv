@@ -1,5 +1,5 @@
+id,product_id,rating,date,summary,body,recommend,reported,reviewer_name,reviewer_email,response,helpfulness
 1,1,5,"2019-01-01","This product was great!","I really did or did not like this product based on whether it was sustainably sourced.  Then I found out that its made from nothing at all.",true,false,"funtime","first.last@gmail.com",,8
 2,1,4,"2019-01-11","This product was ok!","I really did not like this product solely because I am tiny and do not fit into it.",false,false,"mymainstreammother","first.last@gmail.com",,2
 3,2,4,"2019-06-23","I am liking these glasses","They are very dark.  But that's good because I'm in very sunny spots",true,false,"bigbrotherbenjamin","first.last@gmail.com","Glad you're enjoying the product!",5
 14,7,1,"2018-11-11","I don't like Kanye","I didn't buy the shoes but I don't like the man behind them",false,true,"taylor","first.last@gmail.com",,0
-15,12,5,"2019-04-11","Sed repellat quo recusandae.","Vitae reiciendis aspernatur voluptatem labore voluptatem ullam quos. Esse dolorum quas sunt unde est. Odio necessitatibus natus commodi at. Quia exercitationem aut quia sapiente harum et. Odit et hic nobis.",1,0,"Pink.Purdy25","Donny.Jacobson11@yahoo.com",null,11
