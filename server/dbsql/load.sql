@@ -12,6 +12,6 @@
 -- FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS
 -- (@col1,@col2, @dummy) set id=@col1,characteristics_id=@col1,product_id=@col2;
 
-LOAD DATA LOCAL INFILE '/Users/kanchanchauhan/Documents/sei/sdc/Reviews/data/characteristic_reviews.csv' INTO TABLE characteristics_reviews FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS (@col1,@col2,@col3, @col4) SET id=@col1, characteristics_id=@col2, reviews_id=@col3, characteristics_value=@col4;
+-- LOAD DATA LOCAL INFILE '/Users/kanchanchauhan/Documents/sei/sdc/Reviews/data/characteristic_reviews.csv' INTO TABLE characteristics_reviews FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS (@col1,@col2,@col3, @col4) SET id=@col1, characteristics_id=@col2, reviews_id=@col3, characteristics_value=@col4;
 
-LOAD DATA LOCAL INFILE '/Users/kanchanchauhan/Documents/sei/sdc/Reviews/data/characteristic_reviews.csv' INTO TABLE characteristics_reviews FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
+-- LOAD DATA LOCAL INFILE '/Users/kanchanchauhan/Documents/sei/sdc/Reviews/data/characteristic_reviews.csv' INTO TABLE characteristics_reviews FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS;

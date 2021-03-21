@@ -50,7 +50,7 @@ CREATE TABLE characteristics_product (
   FOREIGN KEY(product_id) REFERENCES product(id)
 );
 
-CREATE TABLE characteristics_reviews(
+CREATE TABLE characteristics_reviews (
   id INT NOT NULL AUTO_INCREMENT,
   characteristics_id INT NOT NULL,
   reviews_id INT UNSIGNED NOT NULL,
