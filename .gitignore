@@ -106,3 +106,6 @@ dist
 # csv data folder
 data/
 dataClean/
+
+# newrelic
+newrelic.js
