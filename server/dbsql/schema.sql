@@ -14,7 +14,7 @@ CREATE TABLE reviews (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   product_id INT UNSIGNED NOT NULL,
   rating TINYINT NOT NULL,
-  review_date DATETIME NOT NULL,
+  review_date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   summary VARCHAR(60),
   body VARCHAR(1000),
   recommend BOOLEAN NOT NULL,
@@ -30,10 +30,12 @@ CREATE TABLE reviews (
 CREATE TABLE photos (
   id INT NOT NULL AUTO_INCREMENT,
   reviews_id INT UNSIGNED NOT NULL,
-  photo_url VARCHAR(1000),
+  photo_url TEXT(1000),
   PRIMARY KEY(id),
   FOREIGN KEY (reviews_id) REFERENCES reviews(id)
 );
+
+CREATE INDEX reviews_id ON photos(reviews_id);
 
 CREATE TABLE characteristics (
   id INT NOT NULL AUTO_INCREMENT,
@@ -59,7 +61,6 @@ CREATE TABLE characteristics_reviews (
   FOREIGN KEY(characteristics_id) REFERENCES characteristics(id),
   FOREIGN KEY(reviews_id) REFERENCES reviews(id)
 );
-
 
 
 
