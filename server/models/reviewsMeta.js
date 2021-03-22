@@ -13,12 +13,17 @@ const getRatings = (product_id, callback) => {
   });
 }
 
-const getCharacteristicsID = (product_id, callback) => {
+const getCharacteristics = (product_id, callback) => {
 
-  const sqlStr = `SELECT characteristics_product.characteristics_id, characteristics.characteristics_name
-  FROM characteristics_product
-  INNER JOIN characteristics ON 
-  WHERE product_id = '${product_id}'`;
+  const sqlStr = `SELECT characteristics.id, characteristics.characteristics_name, characteristics_reviews.characteristics_value
+  FROM characteristics
+  INNER JOIN
+    (SELECT characteristics_id
+    FROM characteristics_product
+    WHERE product_id = '${product_id}') b
+    ON b.characteristics_id = characteristics.id
+  INNER JOIN characteristics_reviews
+    ON b.characteristics_id = characteristics_reviews.characteristics_id`;
 
   db.query(sqlStr, (err, results) => {
     if (err) {
@@ -30,4 +35,4 @@ const getCharacteristicsID = (product_id, callback) => {
 }
 
 
-module.exports = { getRatings, getCharacteristicsID };
+module.exports = { getRatings, getCharacteristics };
