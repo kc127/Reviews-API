@@ -1,6 +1,6 @@
 const models = require('../models');
 
-const getMetaReviews = ((req, res) => {
+const getMetaReviews = ((req, res, next) => {
   const product_id = 5000;
   const metaReview = {};
   metaReview['product_id'] = product_id;
@@ -23,6 +23,7 @@ const getMetaReviews = ((req, res) => {
           metaReview['characteristics'][char.characteristics_name] = charIdValue
         }
           res.send(metaReview);
+          next()
         }
       })
     }

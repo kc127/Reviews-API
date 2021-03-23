@@ -2,7 +2,7 @@ const models = require('../models');
 
 
 
-const getReviews = (req, res) => {
+const getReviews = (req, res, next) => {
   const product_id = 5000;
   models.reviews.getReviews(product_id, (err, data) => {
     if (err) {
@@ -29,13 +29,14 @@ const getReviews = (req, res) => {
         results.push(eachReview);
       }
       res.send(reviews);
+      next()
     }
   })
 }
 
 /* post request to add a new review */
 
-const postReview = (req, res) => {
+const postReview = (req, res, next) => {
   const review = {};
   const photos = [];
   review['product_id'] = req.body.product_id;
@@ -81,6 +82,7 @@ const postReview = (req, res) => {
                               res.status(404);
                             } else {
                               res.status(201);
+                              next()
                             }
                           })
                         }

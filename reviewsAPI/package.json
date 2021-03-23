@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "load-db": "mysql -u root -p",
-    "nodemon": "nodemon server/server.js"
+    "node": "node ReviewsAPI/server.js"
   },
   "repository": {
     "type": "git",
