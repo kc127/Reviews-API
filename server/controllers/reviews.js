@@ -1,5 +1,7 @@
 const models = require('../models');
 
+
+
 const getReviews = (req, res) => {
   const product_id = 5000;
   models.reviews.getReviews(product_id, (err, data) => {
@@ -8,7 +10,6 @@ const getReviews = (req, res) => {
     } else {
       const reviews = {};
       const results = [];
-      console.log(data);
       reviews['product'] = data[0].product_id;
       reviews['results'] = results;
       for (var review of data) {

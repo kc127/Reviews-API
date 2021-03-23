@@ -7,10 +7,8 @@ const updateHelpfulness = (review_id, callback) => {
 
   db.query(sqlStr, (err, results) => {
     if (err) {
-      console.log('errror')
       callback(err, null);
     } else {
-      console.log('hereee')
       callback(null, results);
     }
   })

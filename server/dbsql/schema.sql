@@ -35,7 +35,7 @@ CREATE TABLE photos (
   FOREIGN KEY (reviews_id) REFERENCES reviews(id)
 );
 
-CREATE INDEX reviews_id ON photos(reviews_id);
+
 
 CREATE TABLE characteristics (
   id INT NOT NULL AUTO_INCREMENT,

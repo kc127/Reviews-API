@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  reviews:
+    build: server/
+    depends_on:
+      - 'database'
+    ports:
+      - '3000:3000'
+
+  database:
+    image: mysql:8.0.23
+    restart: always
+    environment:
+      MYSQL_DATABASE: retaildb
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+    volumes:
+      - ./server/dbsql/dataClean:/tmp
