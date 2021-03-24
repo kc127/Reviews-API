@@ -1,7 +1,9 @@
 const models = require('../models');
+const bodyParser = require('body-parser');
 
 const getMetaReviews = ((req, res, next) => {
-  const product_id = 5000;
+  
+  const product_id = req.query;
   const metaReview = {};
   metaReview['product_id'] = product_id;
   models.reviewsMeta.getRatings(product_id, (err, data) => {

@@ -9,7 +9,7 @@ const controllers = require('./controllers/index.js');
 const router = require('./routes.js');
 
 const app = express();
-const PORT = 4000;
+const PORT = 5000;
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());

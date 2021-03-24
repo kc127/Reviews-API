@@ -1,10 +1,12 @@
 const models = require('../models');
-
+const bodyParser = require('body-parser');
+//app.use(bodyParser.json());
 
 
 const getReviews = (req, res, next) => {
   const product_id = 500005;
-  models.reviews.getReviews(product_id, (err, data) => {
+  console.log(req.query)
+  models.reviews.getReviews(req.query, (err, data) => {
     if (err) {
       res.status(400);
     } else {
