@@ -1,10 +1,10 @@
--- DROP DATABASE IF EXISTS retaildb;
+DROP DATABASE IF EXISTS retaildb;
 
--- CREATE DATABASE retaildb;
+CREATE DATABASE retaildb;
 
 USE retaildb;
 
-CREATE TABLE IF NOT EXISTS product (
+CREATE TABLE product (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   product_id INT UNSIGNED NOT NULL,
   PRIMARY KEY(id)
@@ -27,6 +27,7 @@ CREATE TABLE reviews (
   FOREIGN KEY (product_id) REFERENCES product(id)
 );
 
+
 CREATE TABLE photos (
   id INT NOT NULL AUTO_INCREMENT,
   reviews_id INT UNSIGNED NOT NULL,
@@ -34,7 +35,6 @@ CREATE TABLE photos (
   PRIMARY KEY(id),
   FOREIGN KEY (reviews_id) REFERENCES reviews(id)
 );
-
 
 
 CREATE TABLE characteristics (

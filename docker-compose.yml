@@ -2,19 +2,19 @@ version: '3'
 
 services:
   reviews:
-    build: server/
+    build: reviewsAPI/
     depends_on:
-      - 'database'
+      - 'db'
     ports:
-      - '3000:3000'
+      - '4000:4000'
 
-  database:
+  db:
     image: mysql:8.0.23
     restart: always
     environment:
       MYSQL_DATABASE: retaildb
       MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
     volumes:
-      - ./server/dbsql/dataClean:/tmp
+      - ./reviewsAPI/dbsql/dataClean:/tmp
 
 

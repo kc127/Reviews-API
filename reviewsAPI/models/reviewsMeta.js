@@ -2,7 +2,7 @@ const db = require('../dbsql');
 
 const getRatings = (product_id, callback) => {
 
-  const sqlStr = `SELECT AVG(rating), SUM(recommend = 1), SUM(recommend = 0) FROM reviews WHERE product_id = '${product_id}'`;
+  const sqlStr = `SELECT SUM(rating = 0), SUM(rating = 1), SUM(rating = 2), SUM(rating = 3), SUM(rating = 4), SUM(rating = 5), SUM(recommend = 1), SUM(recommend = 0) FROM reviews WHERE product_id = '${product_id}'`;
 
   db.query(sqlStr, (err, results) => {
     if (err) {

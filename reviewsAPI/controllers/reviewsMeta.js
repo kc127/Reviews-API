@@ -8,7 +8,13 @@ const getMetaReviews = ((req, res, next) => {
     if (err) {
       res.status(404);
     } else {
-      metaReview['ratings'] = data[0]['AVG(rating)'];
+      metaReview['ratings'] = {};
+      metaReview['ratings']["0"] = data[0]['SUM(rating = 0)'];
+      metaReview['ratings']["1"] = data[0]['SUM(rating = 1)'];
+      metaReview['ratings']["2"] = data[0]['SUM(rating = 2)'];
+      metaReview['ratings']["3"] = data[0]['SUM(rating = 3)'];
+      metaReview['ratings']["4"] = data[0]['SUM(rating = 4)'];
+      metaReview['ratings']["5"] = data[0]['SUM(rating = 5)'];
       metaReview['recommend'] = {};
       metaReview['recommend']['true'] = data[0]['SUM(recommend = 1)']
       metaReview['recommend']['false'] = data[0]['SUM(recommend = 0)']
