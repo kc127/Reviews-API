@@ -1,7 +1,7 @@
 const db = require('../dbsql');
 
 const getReviews = (product_id, callback) => {
-  console.log("this is product_id", product_id)
+
   const sqlStr = `SELECT reviews.id,reviews.rating, reviews.review_date, reviews.summary, reviews.body, reviews.recommend, reviews.reviewer_name, reviews.reviewer_email, reviews.response, reviews.helpfulness, photos.photo_url FROM reviews LEFT JOIN photos ON photos.reviews_id=reviews.id WHERE reviews.product_id = '${product_id}' AND reviews.reported = 0`;
 
   db.query(sqlStr, (err, results) => {
