@@ -1,10 +1,8 @@
 const models = require('../models');
-//const bodyParser = require('body-parser');
-//app.use(bodyParser.json());
-
 
 const getReviews = (req, res, next) => {
   const product_id = req.query.product_id;
+  console.log(product_id)
   models.reviews.getReviews(product_id, (err, data) => {
     if (err) {
       res.status(400);
@@ -15,7 +13,9 @@ const getReviews = (req, res, next) => {
       reviews['page'] = 0;
       reviews['count'] = data.length;
       reviews['results'] = results;
+      //console.log(data);
       for (var review of data) {
+
         const eachReview = {};
         const photos = [];
         eachReview['review_id'] = review.id;
