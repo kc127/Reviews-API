@@ -13,7 +13,6 @@ const getReviews = (req, res, next) => {
       reviews['page'] = 0;
       reviews['count'] = data.length;
       reviews['results'] = results;
-      //console.log(data);
       for (var review of data) {
 
         const eachReview = {};

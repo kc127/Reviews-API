@@ -8,7 +8,6 @@ const getReviews = (product_id, callback) => {
     if (err) {
       callback(err, null);
     } else {
-      console.log(results);
       callback(null, results);
     }
   })
