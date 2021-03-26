@@ -1,7 +1,7 @@
 var mysql = require('mysql');
 
 const db = mysql.createPool({
-  host:'localhost',
+  host:'ec2-100-25-146-78.compute-1.amazonaws.com',
   port: 3306,
   user:'root',
   password:'password',
