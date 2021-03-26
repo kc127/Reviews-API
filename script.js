@@ -14,7 +14,13 @@ export let options = {
 };
 
 export default function () {
-  http.get('http://localhost:3000/reviews');
-  http.get('http://localhost:3000/reviews/meta');
+  const product_id = Math.floor(Math.random()*1000000);
+  const x = 5000;
+  http.get('http://localhost:5000/reviews/5000')
+  // http.get(`http://ec2-3-92-221-72.compute-1.amazonaws.com:5000/reviews/${x}`);
+  // http.get(`http://ec2-3-92-221-72.compute-1.amazonaws.com:5000/reviews/meta/${x}`);
   sleep(1);
 }
+
+// spike test
+// 3 different strategies for stress testing 

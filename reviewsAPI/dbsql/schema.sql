@@ -62,6 +62,7 @@ CREATE TABLE characteristics_reviews (
   FOREIGN KEY(reviews_id) REFERENCES reviews(id)
 );
 
+-- SET FOREIGN KEY CHECKS = 0;
 
 
 
