@@ -1,36 +1,17 @@
-var mysql = require('mysql');
-
-const db = mysql.createPool({
-  host:'ec2-100-25-146-78.compute-1.amazonaws.com',
-  port: 3306,
-  user:'root',
-  password:'password',
-  database:'retaildb',
-  waitForConnections: true,
-  connectionLimit:10,
-  queueLimit: 0
-});
-
-db.getConnection((err) => {
-  if(err){
-    console.log("err connecting to mysql");
-    return;
-  }
-  console.log("successfully connected to mysql")
-})
-
-module.exports = db;
-
 // var mysql = require('mysql');
 
-// const db = mysql.createConnection({
-//   host:'localhost',
+// const db = mysql.createPool({
+//   host:'ec2-100-25-146-78.compute-1.amazonaws.com',
+//   port: 3306,
 //   user:'root',
 //   password:'password',
-//   database:'retaildb'
+//   database:'retaildb',
+//   waitForConnections: true,
+//   connectionLimit:10,
+//   queueLimit: 0
 // });
 
-// db.connect((err) => {
+// db.getConnection((err) => {
 //   if(err){
 //     console.log("err connecting to mysql");
 //     return;
@@ -39,4 +20,23 @@ module.exports = db;
 // })
 
 // module.exports = db;
+
+var mysql = require('mysql');
+
+const db = mysql.createConnection({
+  host:'localhost',
+  user:'root',
+  password:'password',
+  database:'retaildb'
+});
+
+db.connect((err) => {
+  if(err){
+    console.log("err connecting to mysql");
+    return;
+  }
+  console.log("successfully connected to mysql")
+})
+
+module.exports = db;
 
