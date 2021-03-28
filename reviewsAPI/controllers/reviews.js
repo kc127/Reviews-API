@@ -2,7 +2,6 @@ const models = require('../models');
 
 const getReviews = (req, res, next) => {
   const product_id = req.query.product_id || 1;
-  console.log(req.query)
   models.reviews.getReviews(product_id, (err, data) => {
     if (err) {
       res.status(400);
