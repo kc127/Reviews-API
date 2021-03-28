@@ -1,15 +1,16 @@
 const models = require('../models');
 
 const getReviews = (req, res, next) => {
-  const product_id = req.params.product_id;
-  
+  const product_id = req.query.product_id || 1;
+  console.log(req.query)
   models.reviews.getReviews(product_id, (err, data) => {
     if (err) {
       res.status(400);
     } else {
       const reviews = {};
       const results = [];
-      reviews['product'] = data[0].product_id;
+      const curr_product_id = product_id
+      reviews['product'] = product_id
       reviews['page'] = 0;
       reviews['count'] = data.length;
       reviews['results'] = results;
@@ -20,8 +21,8 @@ const getReviews = (req, res, next) => {
         eachReview['review_id'] = review.id;
         eachReview['rating'] = review.rating;
         eachReview['summary'] = review.summary;
-        eachReview['recommend'] = review.recommend;
-        eachReview['response'] = review.response;
+        eachReview['recommend'] = Boolean(review.recommend);
+        eachReview['response'] = review.response === 'null' ? null : review.response;
         eachReview['body'] = review.body;
         eachReview['date'] = review.review_date;
         eachReview['reviewer_name'] = review.reviewer_name;
