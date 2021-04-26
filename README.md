@@ -42,7 +42,7 @@ Reviews API is the back end infrastructure for the front end application of an e
 After achieving my sub goal of query time of less than 50 ms in the local environment, I decided to deploy my microservice and MySQL database onto the cloud using AWS EC2 instance.
 
 ### Observations and Bottlenecks
-Using loader.io integrated with new relic testing platform, I observed that my response time was was pretty high (~3 seconds) for 500 RPS. And AWS cloudwatch report showed that my CPU utilization of MySQL+Reviews EC2 instance was around 30%,
+Using loader.io integrated with new relic testing platform, I observed that my response time was was pretty high (~3 seconds) for 1000 RPS. And AWS cloudwatch report showed that my CPU utilization of MySQL+Reviews EC2 instance was around 30%,
 
 <img src="./readme/cpu.png" alt="drawing" width="1000"/>
 <br>
