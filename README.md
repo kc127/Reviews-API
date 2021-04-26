@@ -1,6 +1,6 @@
 ## Reviews API
 
-![GitHub last commit](https://img.shields.io/github/last-commit/kc127/reviews-api)
+![GitHub last commit](https://img.shields.io/github/last-commit/kc127/reviews-api) ![Github Repo status](https://img.shields.io/badge/repo%20status-active-red)
 
 
 ### About
@@ -13,6 +13,11 @@ Reviews API is the back end infrastructure for the front end application of an e
 * NGINX load balancer
 * Amazon Web Services for Deployment
 * k6, loader.io integrated with New Relic
+* docker
+
+### Schema
+
+<img src="./readme/schema.png" alt="drawing" width="500"/>
 
 
 ### Project Overview
@@ -33,3 +38,28 @@ Reviews API is the back end infrastructure for the front end application of an e
 1. To achieve response time (latency) of < 2000 ms under load
 2. To achieve throughput of 1000 RPS on EC2
 3. To get error rate < 1% under load
+
+### Deployment
+
+After achieving my sub goal of query time of less than 50 ms in the local environment, I decided to deploy my microservice and MySQL database onto the cloud using AWS EC2 instance.
+
+### Observations and Bottlenecks
+Using loader.io integrated with new relic testing platform, I observed that my response time was was pretty high (5 seconds) for 500 RPS. And AWS cloudwatch report showed that my CPU utilization of MySQL+Reviews EC2 instance was around 30%,
+
+<img src="./readme/cpu.png" alt="drawing" width="500"/>
+
+### Optimizations
+
+In order to decrease response time, I ended up horizontally scaling my system using nginx load balancing with least-conn strategy. I also deploted server and database separately. This decreased my response time from ~3000 ms to 5 ms and error rate decreased from 
+
+1000 RPS, Response Time of *5 ms* with *0.0%* Error rate
+
+<img src="./readme/loadtest.png" alt="drawing" width="500"/>
+<br>
+<br>
+k6 Test in development environment (my local machine)
+
+<img src="./readme/k6.png" alt="drawing" width="500"/>
+
+### Challenges
+
