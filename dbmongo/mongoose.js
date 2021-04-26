@@ -40,51 +40,51 @@ const reviews = new mongoose.Schema({
 })
 
 
-// const reviews_meta = new mongoose.Schema({
-//   product_id: {type: Number},
-//   ratings: {
-//     zero: {type: Number},
-//     one:{type: Number} ,
-//     two: {type: Number},
-//     three: {type: Number},
-//     four: {type: Number},
-//     five:{type: Number}
-//   },
-//   recommended: {
-//     false: {type: Number},
-//     true: {type: Number}
-//   },
-//   characteristics: {
-//     characteristics_name: {
-//       type: type: mongoose.Schema.Type.ObjectId,
-//       ref: 'id_value',
-//     }
-//   }
-// });
+const reviews_meta = new mongoose.Schema({
+  product_id: {type: Number},
+  ratings: {
+    zero: {type: Number},
+    one:{type: Number} ,
+    two: {type: Number},
+    three: {type: Number},
+    four: {type: Number},
+    five:{type: Number}
+  },
+  recommended: {
+    false: {type: Number},
+    true: {type: Number}
+  },
+  characteristics: {
+    characteristics_name: {
+      type: type: mongoose.Schema.Type.ObjectId,
+      ref: 'id_value',
+    }
+  }
+});
 
-// const id_value = new mongoose.Schema({
-//   id: {type: Number},
-//   value: {type: Number}
-// })
+const id_value = new mongoose.Schema({
+  id: {type: Number},
+  value: {type: Number}
+})
 
-// const characteristics = new mongoose.Schema({
-//   characteristics_name: {
-//     type: mongoose.Schema.Type.ObjectId,
-//     ref: 'id_value',
-//   }
-// })
+const characteristics = new mongoose.Schema({
+  characteristics_name: {
+    type: mongoose.Schema.Type.ObjectId,
+    ref: 'id_value',
+  }
+})
 
-// const recommended = new mongoose.Schema({
-//   false: {type: Number},
-//   true: {type: Number}
-// })
+const recommended = new mongoose.Schema({
+  false: {type: Number},
+  true: {type: Number}
+})
 
-// const ratings = new mongoose.Schema({
-//   zero: {type: Number},
-//   one:{type: Number} ,
-//   two: {type: Number},
-//   three: {type: Number},
-//   four: {type: Number},
-//   five:{type: Number}
-// })
+const ratings = new mongoose.Schema({
+  zero: {type: Number},
+  one:{type: Number} ,
+  two: {type: Number},
+  three: {type: Number},
+  four: {type: Number},
+  five:{type: Number}
+})
 
