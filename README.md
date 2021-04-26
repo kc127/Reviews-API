@@ -15,7 +15,7 @@ Reviews API is the back end infrastructure for the front end application of an e
 
 ### Schema
 
-<img src="./readme/schema.png" alt="drawing" width="500"/>
+<img src="./readme/schema.png" alt="drawing" width="1000"/>
 
 
 ### Project Overview
@@ -44,21 +44,21 @@ After achieving my sub goal of query time of less than 50 ms in the local enviro
 ### Observations and Bottlenecks
 Using loader.io integrated with new relic testing platform, I observed that my response time was was pretty high (5 seconds) for 500 RPS. And AWS cloudwatch report showed that my CPU utilization of MySQL+Reviews EC2 instance was around 30%,
 
-<img src="./readme/cpu.png" alt="drawing" width="500"/>
+<img src="./readme/cpu.png" alt="drawing" width="1000"/>
 <br>
 <br>
-<img src="./readme/loadtest_before.png" alt="drawing" width="500"/>
+<img src="./readme/loadtest_before.png" alt="drawing" width="1000"/>
 
 ### Optimizations
 #### Horizontal Scaling
 
 In order to decrease response time, I ended up horizontally scaling my system using nginx load balancing with least-conn strategy. I also deploted server and database separately. This decreased my response time from ~3000 ms to 5 ms and error rate decreased from
 
-<img src="./readme/diagram.png" alt="drawing" width="500"/>
+<img src="./readme/diagram.png" alt="drawing" width="1000"/>
 
 1000 RPS, Response Time of *5 ms* with *0.0%* Error rate
 
-<img src="./readme/loadtest_after.png" alt="drawing" width="500"/>
+<img src="./readme/loadtest_after.png" alt="drawing" width="1000"/>
 <br>
 <br>
 k6 Test in development environment (my local machine)
