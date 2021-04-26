@@ -62,8 +62,7 @@ In order to decrease response time, I ended up horizontally scaling my system us
 <br>
 <br>
 k6 Test in development environment (my local machine)
-
+<br>
 <img src="./readme/k6.png" alt="drawing" width="500"/>
 
-### Challenges
 
