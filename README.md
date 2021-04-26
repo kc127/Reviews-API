@@ -6,7 +6,7 @@
 ### About
 Reviews API is the back end infrastructure for the front end application of an e-commerce website, *Fashion House* with primary focus on system design and scaling.
 
-<img src="./readme/diagram.png" alt="drawing" width="300"/>
+<img src="./readme/diagram.png" alt="drawing" width="400"/>
 
 ### Tech Stack
 * Reviews Microservice was primarily built using Node/Express with MySQL for database.
