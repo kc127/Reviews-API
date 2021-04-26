@@ -15,7 +15,7 @@ Reviews API is the back end infrastructure for the front end application of an e
 
 ### Schema
 
-<img src="./readme/schema.png" alt="drawing" width="500"/>
+<img src="./readme/schema.png" alt="drawing" width="600"/>
 
 
 ### Project Overview
