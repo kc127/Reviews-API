@@ -52,7 +52,7 @@ Using loader.io integrated with new relic testing platform, I observed that my r
 ### Optimizations
 #### Horizontal Scaling
 
-In order to decrease response time, I ended up horizontally scaling my system using nginx load balancing with least-conn strategy. I also deploted server and database separately. This decreased my response time from ~3000 ms to 5 ms and error rate decreased from
+In order to decrease response time, I ended up horizontally scaling my system using nginx load balancing with least-conn strategy. I also deployed server and database separately. This decreased my response time from ~3000 ms to 5 ms and error rate decreased to 0%. 
 
 <img src="./readme/diagram.png" alt="drawing" width="1000"/>
 
