@@ -10,7 +10,7 @@ Reviews API is the back end infrastructure for the front end application of an e
 * Reviews Microservice was primarily built using Node/Express with MySQL for database.
 * NGINX load balancer
 * Amazon Web Services for Deployment
-* k6, loader.io integrated with New Relic
+* k6, loader.io integrated with New Relic for Testing 
 * docker
 
 ### Schema
